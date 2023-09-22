@@ -1,1 +1,1 @@
-<span>Initial commit</span>
+<span>KanaPractice</span>
