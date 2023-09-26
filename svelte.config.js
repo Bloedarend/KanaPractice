@@ -5,7 +5,7 @@ const config = {
   kit: {
     adapter: adapter(),
     paths: {
-      base: "/sveltekit-gh-pages"
+      base: process.env.name === "github-pages" ? "/sveltekit-gh-pages" : ""
     },
   },
 };
