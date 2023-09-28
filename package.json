@@ -1,4 +1,6 @@
 {
+  "name": "KanaPractice",
+  "version": "1.0.0",
   "private": true,
   "license": "GPL",
   "type": "module",
@@ -10,6 +12,8 @@
     "@sveltejs/adapter-static": "^2.0.3",
     "@sveltejs/kit": "^1.24.1",
     "autoprefixer": "^10.4.14",
+    "flowbite": "^1.8.1",
+    "flowbite-svelte": "^0.44.17",
     "gh-pages": "^6.0.0",
     "postcss": "^8.4.24",
     "postcss-load-config": "^4.0.1",
