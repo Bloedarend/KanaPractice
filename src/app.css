@@ -1,8 +1,0 @@
-@font-face {
-	font-family: 'Roboto Medium';
-	src: url("/fonts/Roboto-Medium.ttf") format('truetype');
-}
-
-:root {
-	font-family: "Roboto Medium", serif;
-}
