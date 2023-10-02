@@ -1,28 +1,29 @@
 /** @type {import('tailwindcss').Config}*/
+import { join } from 'path';
+import { skeleton } from '@skeletonlabs/tw-plugin';
+import { theme } from './skeletonlabs-theme.cjs'
+
 const config = {
-  content: ["./src/**/*.{html,js,svelte,ts}", './node_modules/flowbite-svelte/**/*.{html,js,svelte,ts}'],
-
+  darkMode: 'class',
+  content: [
+    './src/**/*.{html,js,svelte,ts}',
+    join(require.resolve(
+            '@skeletonlabs/skeleton'),
+        '../**/*.{html,js,svelte,ts}'
+    )
+  ],
   theme: {
-    extend: {
-      colors: {
-        // flowbite-svelte
-        primary: {
-          50: '#FFF5F2',
-          100: '#FFF1EE',
-          200: '#FFE4DE',
-          300: '#FFD5CC',
-          400: '#FFBCAD',
-          500: '#FE795D',
-          600: '#EF562F',
-          700: '#EB4F27',
-          800: '#CC4522',
-          900: '#A5371B'
-        }
-      }
-    },
+    extend: {},
   },
+  plugins: [
+    skeleton({
+      themes: {
+        custom: [
+          theme
+        ]
+      }
+    })
+  ]
+}
 
-  plugins: [require('flowbite/plugin')],
-};
-
-module.exports = config;
+export default config;
