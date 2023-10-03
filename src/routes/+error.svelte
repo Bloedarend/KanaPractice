@@ -1,8 +1,8 @@
 <script lang="ts">
     import { page } from '$app/stores';
-    import {base} from "$app/paths";
+    import { base } from "$app/paths";
 
-    export let data;
+    export let data: WebsiteState;
 </script>
 
 <div class="flex flex-row items-center justify-center absolute w-full h-full">

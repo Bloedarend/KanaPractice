@@ -1,7 +1,6 @@
 <script lang="ts">
     import "../app.postcss";
-
-    export let data;
+    export let data: WebsiteState;
 </script>
 
 <svelte:head>

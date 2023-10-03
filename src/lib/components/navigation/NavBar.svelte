@@ -1,10 +1,8 @@
 <script lang="ts">
-    import {page} from "$app/stores";
-    $: activeUrl = $page.url.pathname;
-
-    export let toggleVisibility;
+     export let classes: string = "";
 </script>
 
-<nav class="bg-surface-50 dark:bg-surface-800 flex absolute left-0 right-0 top-0 w-full p-2">
+<div class="{classes}"></div> <!-- Empty div to take up same space as navbar -->
+<nav class="{classes} flex absolute left-0 right-0 top-0 w-full">
     <slot />
 </nav>
