@@ -1,4 +1,6 @@
-export const theme = {
+import { CustomThemeConfig } from "@skeletonlabs/tw-plugin";
+
+export const theme: CustomThemeConfig = {
     name: 'skeletonlabs-theme',
     properties: {
 		// =~= Theme Properties =~=
@@ -96,4 +98,4 @@ export const theme = {
 		"--color-surface-800": "54 54 48", // #363630
 		"--color-surface-900": "44 44 39", // #2c2c27
 	}
-}
+};
