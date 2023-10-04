@@ -1,14 +1,17 @@
 <script lang="ts">
-    import { getDrawerStore } from "@skeletonlabs/skeleton";
+    import { getDrawerStore, type DrawerSettings, type DrawerStore } from "@skeletonlabs/skeleton";
     import { navigationState } from "$lib/stores/session-store";
 	import { onMount } from "svelte";
 
-    const drawerStore = getDrawerStore();
+    const drawerStore: DrawerStore = getDrawerStore();
+    const drawerSettings: DrawerSettings = {
+        id: "portrait-drawer"
+    }
 
     const toggleDrawer: () => void = () => {
         $navigationState.drawerVisible = !$navigationState.drawerVisible;
         if ($navigationState.drawerVisible) {
-            drawerStore.open();
+            drawerStore.open(drawerSettings);
         } else {
             drawerStore.close();
         }
