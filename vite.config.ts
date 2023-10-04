@@ -10,6 +10,6 @@ export default defineConfig({
 				// any selectors that begin with "hljs-" will not be purged
 				greedy: [/^hljs-/]
 			}
-		})
+		}),
 	]
 });

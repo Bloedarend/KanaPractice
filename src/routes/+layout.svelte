@@ -1,6 +1,7 @@
 <script lang="ts">
     import { setInitialClassState } from "@skeletonlabs/skeleton";
     import "../app.postcss";
+
     export let data: WebsiteState;
 </script>
 

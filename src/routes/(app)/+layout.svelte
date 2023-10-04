@@ -13,7 +13,7 @@
     export let data: WebsiteState;
 
     $: activeUrl = $page.url.pathname;
-    $: activeName = (activeUrl !== "/" ? activeUrl.slice(activeUrl.lastIndexOf("/") + 1) : "home")
+    $: activeName = (activeUrl !== "/" ? activeUrl.slice(activeUrl.lastIndexOf("/") + 1) : "home");
     $: activeNameFormatted = activeName.charAt(0).toUpperCase() + activeName.slice(1);
 
     const navItemClasses: string = "mx-3 mb-0.5 my-0 text-md hover:text-secondary-500 dark:hover:text-primary-500";

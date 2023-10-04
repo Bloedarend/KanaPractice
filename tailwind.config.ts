@@ -16,11 +16,11 @@ const config: Config = {
     skeleton({
       themes: {
         custom: [
-          theme
-        ]
-      }
-    })
-  ]
+          theme,
+        ],
+      },
+    }),
+  ],
 };
 
 export default config;
