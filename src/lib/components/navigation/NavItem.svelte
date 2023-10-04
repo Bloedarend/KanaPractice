@@ -9,8 +9,10 @@
 
     export let classes: string = "";
     export let activeClasses: string = "";
+
+    console.log(activeUrl, href)
 </script>
 
-<a class="{classes} {activeUrl === href | activeClasses}" href="{href}">
+<a class="{classes} {activeUrl !== href || activeClasses}" href="{href}">
     <slot />
 </a>
