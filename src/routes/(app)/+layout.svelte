@@ -9,8 +9,7 @@
     import NavItem from "$lib/components/navigation/NavItem.svelte";
     import LightSwitch from "$lib/components/utilities/LightSwitch.svelte";
     import NavHamburger from "$lib/components/navigation/NavHamburger.svelte";
-
-    export let data: WebsiteState;
+	import { PUBLIC_LOGO, PUBLIC_NAME } from "$env/static/public";
 
     $: activeUrl = $page.url.pathname;
     $: activeName = (activeUrl !== "/" ? activeUrl.slice(activeUrl.lastIndexOf("/") + 1) : "home");
@@ -21,7 +20,7 @@
 </script>
 
 <svelte:head>
-    <title>{data.name} • {activeNameFormatted}</title>
+    <title>{PUBLIC_NAME} • {activeNameFormatted}</title>
 </svelte:head>
 
 <AppShell>
@@ -29,9 +28,9 @@
         <NavBar classes="bg-surface-50 dark:bg-surface-800 h-12 p-2">
             <NavBrand>
                 <a class="mr-3" href="{base}/">
-                    <img class="h-9 w-9" src="{data.logo}" alt="Logo"/>
+                    <img class="h-9 w-9" src="{PUBLIC_LOGO}" alt="Logo"/>
                 </a>
-                <span class="cursor-default text-2xl mb-0.5 font-semibold">{data.name}</span>
+                <span class="cursor-default text-2xl mb-0.5 font-semibold">{PUBLIC_NAME}</span>
             </NavBrand>
             <div class="flex ml-auto items-center">
                 <NavList>
