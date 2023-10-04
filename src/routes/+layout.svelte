@@ -1,7 +1,10 @@
 <script lang="ts">
-    import { setInitialClassState } from "@skeletonlabs/skeleton";
+    import { Drawer, setInitialClassState } from "@skeletonlabs/skeleton";
+    import { initializeStores } from '@skeletonlabs/skeleton';
     import "../app.postcss";
 	import { PUBLIC_LOGO, PUBLIC_NAME } from "$env/static/public";
+    
+    initializeStores();
 </script>
 
 <svelte:head>
@@ -10,4 +13,5 @@
     {@html `<script>(${setInitialClassState.toString()})();</script>`}
 </svelte:head>
 
+<Drawer />
 <slot />

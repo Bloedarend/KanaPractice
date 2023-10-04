@@ -1,2 +1,2 @@
 /// <reference types="@sveltejs/kit" />
-type NavigationState = { listIsVisible: boolean };
+type NavigationState = { drawerVisible: boolean };
