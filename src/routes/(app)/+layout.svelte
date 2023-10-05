@@ -30,7 +30,7 @@
                 <span class="cursor-default text-2xl mb-0.5 font-semibold">{PUBLIC_NAME}</span>
             </NavBrand>
             <div class="flex ml-auto items-center">
-                <NavList>
+                <NavList className="portrait:hidden">
                     <NavItem {activeUrl} href="{base}/">Home</NavItem>
                     <NavItem {activeUrl} href="{base}/about">About</NavItem>
                 </NavList>
