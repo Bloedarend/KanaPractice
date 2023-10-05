@@ -7,10 +7,10 @@
     href = href ?? `${base}/`;
     activeUrl = activeUrl ?? "";
 
-    export let classes: string = "";
-    export let activeClasses: string = "";
+    export let className: string = "mx-3 mb-0.5 my-0 text-md hover:text-secondary-500 dark:hover:text-primary-500";
+    export let activeClassName: string = "text-secondary-500 dark:text-primary-500";
 </script>
 
-<a class="{classes} {activeUrl !== href || activeClasses}" href="{href}">
+<a class="{className} {activeUrl !== href || activeClassName}" href="{href}">
     <slot />
 </a>

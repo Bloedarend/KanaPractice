@@ -14,9 +14,6 @@
     $: activeUrl = $page.url.pathname;
     $: activeName = (activeUrl !== "/" ? activeUrl.slice(activeUrl.lastIndexOf("/") + 1) : "home");
     $: activeNameFormatted = activeName.charAt(0).toUpperCase() + activeName.slice(1);
-
-    const navItemClasses: string = "mx-3 mb-0.5 my-0 text-md hover:text-secondary-500 dark:hover:text-primary-500";
-    const navItemActiveClasses: string = "text-secondary-500 dark:text-primary-500";
 </script>
 
 <svelte:head>
@@ -25,7 +22,7 @@
 
 <AppShell>
     <svelte:fragment slot="header">
-        <NavBar classes="bg-surface-50 dark:bg-surface-800 h-12 p-2">
+        <NavBar>
             <NavBrand>
                 <a class="mr-3" href="{base}/">
                     <img class="h-9 w-9" src="{PUBLIC_LOGO}" alt="Logo"/>
@@ -34,11 +31,11 @@
             </NavBrand>
             <div class="flex ml-auto items-center">
                 <NavList>
-                    <NavItem classes={navItemClasses} activeClasses={navItemActiveClasses} {activeUrl} href="{base}/">Home</NavItem>
-                    <NavItem classes={navItemClasses} activeClasses={navItemActiveClasses} {activeUrl} href="{base}/about">About</NavItem>
+                    <NavItem {activeUrl} href="{base}/">Home</NavItem>
+                    <NavItem {activeUrl} href="{base}/about">About</NavItem>
                 </NavList>
                 <LightSwitch />
-                <NavHamburger classes="fill-black dark:fill-primary-100 hover:fill-secondary-500 dark:hover:text-primary-500" />
+                <NavHamburger />
             </div>
         </NavBar>
     </svelte:fragment>

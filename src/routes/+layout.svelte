@@ -11,13 +11,7 @@
     initializeStores();
 
     const drawerStore = getDrawerStore();
-
-$: activeUrl = $page.url.pathname;
-$: activeName = (activeUrl !== "/" ? activeUrl.slice(activeUrl.lastIndexOf("/") + 1) : "home");
-$: activeNameFormatted = activeName.charAt(0).toUpperCase() + activeName.slice(1);
-
-const navItemClasses: string = "mx-3 mb-0.5 my-0 text-md hover:text-secondary-500 dark:hover:text-primary-500";
-const navItemActiveClasses: string = "text-secondary-500 dark:text-primary-500";
+    $: activeUrl = $page.url.pathname;
 </script>
 
 <svelte:head>
@@ -27,10 +21,11 @@ const navItemActiveClasses: string = "text-secondary-500 dark:text-primary-500";
 </svelte:head>
 
 <Drawer>
+    <div class=""></div>
     {#if $drawerStore.id === "portrait-drawer"}
-        <NavList>
-            <NavItem classes={navItemClasses} activeClasses={navItemActiveClasses} {activeUrl} href="{base}/">Home</NavItem>
-            <NavItem classes={navItemClasses} activeClasses={navItemActiveClasses} {activeUrl} href="{base}/about">About</NavItem>
+        <NavList className="grid w-full justify-items-center">
+            <NavItem className="hover:text-secondary-500 dark:hover:text-primary-500" {activeUrl} href="{base}/">Home</NavItem>
+            <NavItem className="hover:text-secondary-500 dark:hover:text-primary-500" {activeUrl} href="{base}/about">About</NavItem>
         </NavList>
     {/if}
 </Drawer>
