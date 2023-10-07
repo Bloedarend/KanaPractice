@@ -11,7 +11,7 @@
     export let activeClassName: string = "flex flex-row items-center mx-3 mb-0.5 my-0 text-md text-secondary-500 dark:text-primary-500 fill-secondary-500 dark:fill-primary-500";
 </script>
 
-<a class="{activeUrl !== href ? className : activeClassName}" href="{href}">
+<a class="{!activeUrl.includes(href) || href === base + '/' ? className : activeClassName}" href="{href}">
     <slot name="icon" />
     <slot name="name" />
 </a>
