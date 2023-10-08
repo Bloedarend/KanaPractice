@@ -3,15 +3,19 @@
 @tailwind utilities;
 
 @font-face {
-	font-family: 'Roboto Medium';
-	src: url("/fonts/Roboto-Medium.ttf") format('truetype');
+	font-family: 'Roboto';
+	src: url("/fonts/Roboto.ttf") format('truetype');
+}
+
+:root [data-theme='skeletonlabs-theme'] {
+    --theme-font-family-base: 'Roboto', sans-serif;
+    --theme-font-family-heading: 'Roboto', sans-serif;
 }
 
 /* === Body Styles === */
 
 body {
     @apply bg-surface-50 dark:bg-surface-900;
-    font-family: "Roboto Medium", serif;
 	/* Typography */
 	@apply text-base font-token text-token;
 }
