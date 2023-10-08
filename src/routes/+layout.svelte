@@ -72,6 +72,7 @@
             </div>
         </NavBar>
     </svelte:fragment>
-
-    <slot />
+    <main>
+        <slot />
+    </main>
 </AppShell>
