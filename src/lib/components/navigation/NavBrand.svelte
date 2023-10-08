@@ -1,7 +1,10 @@
 <script lang="ts">
+    import { base } from "$app/paths";
+
     export let className: string = "";
+    export let href: string = `${base}/`
 </script>
 
-<div class="{className} flex items-center">
+<a class="{className} flex items-center" href={href}>
     <slot />
-</div>
+</a>

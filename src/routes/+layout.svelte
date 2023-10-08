@@ -28,11 +28,9 @@
 <AppShell>
     <svelte:fragment slot="header">
         <NavBar>
-            <NavBrand>
-                <a class="mr-3" href="{base}/">
-                    <img class="h-9 w-9" src="{base}/{PUBLIC_LOGO}" alt="Logo"/>
-                </a>
-                <span class="cursor-default text-2xl mb-0.5 font-semibold hidden sm:inline">{PUBLIC_NAME}</span>
+            <NavBrand href="{base}/">
+                <img class="h-9 w-9 mr-3" src="{base}/{PUBLIC_LOGO}" alt="Logo"/>
+                <span class="text-2xl mb-0.5 font-semibold hidden sm:inline">{PUBLIC_NAME}</span>
             </NavBrand>
             <div class="flex ml-auto items-center">
                 <NavList className="">
