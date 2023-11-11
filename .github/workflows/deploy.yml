@@ -40,6 +40,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Sync sveltekit
+        run: svelte-kit sync
+
       - name: Build VuePress site
         run: pnpm build
 
