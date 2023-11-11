@@ -40,9 +40,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Install JS dependencies
-        run: pnpm ci
-
       - name: Build VuePress site
         run: pnpm build
 
