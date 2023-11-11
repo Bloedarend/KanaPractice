@@ -1,17 +1,23 @@
 <script lang="ts">
     import { base } from "$app/paths";
+    import AnchorButton from "$lib/components/interaction/AnchorButton.svelte";
+    import Icon from "$lib/components/core/Icon.svelte";
 
-    export let href: string;
-    export let activeUrl: string;
+    export let path: string = "";
+    export let width: number = 512;
+    export let height: number = 512;
 
-    href = href ?? `${base}/`;
-    activeUrl = activeUrl ?? "";
+    export let href: string = `${base}/`;
+    export let activeUrl: string = "";
 
-    export let className: string = "flex flex-row items-center mx-3 mb-0.5 my-0 text-md hover:text-secondary-500 dark:hover:text-primary-500 dark:fill-primary-50 hover:fill-secondary-500 dark:hover:fill-primary-500";
-    export let activeClassName: string = "flex flex-row items-center mx-3 mb-0.5 my-0 text-md text-secondary-500 dark:text-primary-500 fill-secondary-500 dark:fill-primary-500";
+    export let className: string = "";
+    export let activeClassName: string = "";
+    export let inactiveClassName: string = "";
 </script>
 
-<a class="{activeUrl.startsWith(href) && href !== `${base}/` || href === activeUrl ? activeClassName : className}" href="{href}">
-    <slot name="icon" />
-    <slot name="name" />
-</a>
+<AnchorButton className="{activeUrl.startsWith(href) && href !== `${base}/` || href === activeUrl ? activeClassName : inactiveClassName} {className} mx-1.5" {href}>
+    {#if path.length > 0}
+        <Icon className="fill-inherit dark:fill-inherit pb-0.5" {path} {width} {height} />
+    {/if}
+    <slot />
+</AnchorButton>

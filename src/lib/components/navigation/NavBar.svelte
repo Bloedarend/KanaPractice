@@ -1,8 +1,8 @@
 <script lang="ts">
-     export let className: string = "bg-surface-50 dark:bg-surface-900 h-12 p-2 shadow-lg";
+     export let className: string = "";
 </script>
 
-<div class="{className}"></div> <!-- Empty div to make content start below the fixed navbar -->
-<nav class="{className} flex fixed top-0 z-100 w-full">
+<div class="{className} h-16 invisible"></div> <!-- Empty div to make content start below the fixed navbar -->
+<nav class="{className} h-16 p-1 flex fixed top-0 z-40 w-full shadow-lg">
     <slot />
 </nav>
