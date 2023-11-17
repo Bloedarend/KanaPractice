@@ -30,5 +30,4 @@
 			<slot />
 		</div>
 	</main>
-	<div class="h-14 invisible xs:hidden"></div> <!-- Empty div for navigation list to make content at the bottom scrollable on mobile screen sizes. -->
 </AppShell>
