@@ -63,8 +63,18 @@ const config: Config = {
 				"t-2xl": "0 -25px 50px -12px rgb(0 0 0 / 0.25)",
 			},
 			transitionProperty: {
-				"size": "height, width, margin, padding"
-			}
+				"size": "height, width, margin, padding, scale"
+			},
+			scale: {
+				'96': '0.96',
+				'97': '0.97',
+				'98': '0.98',
+				'99': '0.99',
+				'101': '1.01',
+				'102': '1.02',
+				'103': '1.03',
+				'104': '1.04',
+			},
 		},
 	},
 	plugins: [
