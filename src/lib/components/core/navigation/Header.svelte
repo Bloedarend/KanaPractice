@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { base } from "$app/paths";
 	import { PUBLIC_LOGO, PUBLIC_NAME } from "$env/static/public";
-	import NavBrand from "$lib/components/navigation/NavBrand.svelte";
-	import NavBar from "$lib/components/navigation/NavBar.svelte";
-	import NavItem from "$lib/components/navigation/NavItem.svelte";
-	import LightSwitch from "$lib/components/utilities/LightSwitch.svelte";
-	import NavList from "$lib/components/navigation/NavList.svelte";
+	import NavBrand from "$lib/components/core/navigation/NavBrand.svelte";
+	import NavBar from "$lib/components/core/navigation/NavBar.svelte";
+	import NavItem from "$lib/components/core/navigation/NavItem.svelte";
+	import LightSwitch from "$lib/components/core/interaction/LightSwitch.svelte";
+	import NavList from "$lib/components/core/navigation/NavList.svelte";
 
 	export let activeUrl: string = "/"
 </script>

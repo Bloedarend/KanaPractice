@@ -1,7 +1,7 @@
 <script lang="ts">
     import { base } from "$app/paths";
-    import AnchorButton from "$lib/components/interaction/AnchorButton.svelte";
-    import Icon from "$lib/components/core/Icon.svelte";
+    import AnchorButton from "$lib/components/core/interaction/Anchor.svelte";
+    import Icon from "$lib/components/core/assets/Icon.svelte";
 
     export let path: string = "";
     export let width: number = 512;

@@ -1,3 +1,9 @@
+<script lang="ts">
+	import { title } from "$lib/stores/session-store";
+
+	$title = "Home"
+</script>
+
 <div>Top of the page.</div><br>
 
 <div>S</div>
